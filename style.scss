@@ -21,26 +21,12 @@ body{
 }
 
 .snake {
-
+    background-color: hsl(227, 68%, 52%);
+    border: 0.40vmin solid black
 }
 
 .food {
-    width : $size;
-    height: $size;
-    display: inline-block;
-    position: relative;
-    &::after , &::before {
-    content: '';
-    width : $size;
-    height: $size;
-    border-radius: 50%;
-    border:2px solid $lite;
-    position: absolute;
-    left:0;
-    top: 0;
-    animation: animloader14 2s linear infinite;
-    }
-    &::after {
-    animation-delay: 1s;
-    }
+    background-color: yellow;
+    border-radius: 10vmin;
+    border: 0.25vmin solid black;
 }
