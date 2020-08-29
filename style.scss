@@ -1,0 +1,46 @@
+$lite:  #FFF;
+$size: 48px;
+
+body{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    background-color: #f06d06
+}
+
+#game-board {
+    background-color: hsl(227, 9%, 87%);
+    width: 100vmin;
+    height: 100vmin;
+    display: grid;
+    grid-template-rows: repeat(21, 1fr);
+    grid-template-columns: repeat(21, 1fr);
+}
+
+.snake {
+
+}
+
+.food {
+    width : $size;
+    height: $size;
+    display: inline-block;
+    position: relative;
+    &::after , &::before {
+    content: '';
+    width : $size;
+    height: $size;
+    border-radius: 50%;
+    border:2px solid $lite;
+    position: absolute;
+    left:0;
+    top: 0;
+    animation: animloader14 2s linear infinite;
+    }
+    &::after {
+    animation-delay: 1s;
+    }
+}
